@@ -8,21 +8,35 @@ body{
   background: #F0974A;
 }
 
-form{
+.form{
   display: grid;
-  grid-template-rows: repeat(2fr,4);
-  grid-row-gap: 3rem;
+  grid-template-rows: repeat(5, 1fr);
+  grid-row-gap: .5rem;
   width: 40%;
+  height: 30rem;
   justify-content: center;
   align-items: center;
   margin: .5rem auto; 
 }
 
-
 .combos{
   display: grid;
   grid-template-rows: 2fr 2fr;
-  grid-row-gap: .5rem; 
+  grid-template-columns: 4fr 2fr;
+  column-gap: 3.5rem;
+  grid-row-gap: .5rem;
+  height: 10rem;
+}
+
+.cant, .comboin{
+  display: grid;
+  grid-template-rows: 2fr 2fr 2fr;
+  row-gap: 1rem;
+}
+
+.cant input{
+  width: 4rem;
+  margin-right: .5rem;
 }
 
 .adicionalin{
@@ -42,6 +56,15 @@ input[type="checkbox"]{
   text-align: center;
 }
 
+.comentarios>h3{
+  margin: 1rem;
+}
 
+.titulo{
+  display: flex;
+}
 
-
+#hCant{
+  position: relative;
+  left: 15rem;
+}

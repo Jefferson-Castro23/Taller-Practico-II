@@ -12,50 +12,79 @@
     <h1>Bienvenido a Negrolandia</h1>
   </div>
   <div class="container">
-    <form>
+    <div class="form">
 
-      <div class="combos">
+      <div class="titulo">
         <h3>Escoja Su combo</h3>
+        <h3 id="hCant">Cantidad</h3>
+      </div>
+      <div class="combos">
         <div class="comboin">
-          <div> <input value="7.25" class="comboscheck" type="checkbox" name="combo" id="combo1" onclick="calcular();">Super combo $7.25: (tres piezas de pollo, ensalada, papas fritas y bebida grande).</div>
-          <div><input class="comboscheck" type="checkbox" name="combo" id="combo2"> Combo Personal $5.75: (dos piezas  de pollo, papa frita y bebida mediana).</div> 
-          <div><input class="comboscheck" type="checkbox" name="combo" id="combo3"> Combo infantil $3.50 : (1 pieza de pollo, papas  fritas y una bebida pequeña).</div>
+          <div>
+            <input value="7.25" class="comboscheck" type="radio" name="combo" id="combo1" onclick="calcular();" checked>Super combo $7.25: (tres piezas de pollo, ensalada, papas fritas y bebida grande).
+          </div>
+          <div>
+            <input class="comboscheck" type="radio" name="combo" id="combo2" onclick="calcular();"> Combo Personal $5.75: (dos piezas  de pollo, papa frita y bebida mediana).
+          </div> 
+          <div>
+            <input class="comboscheck" type="radio" name="combo" id="combo3" onclick="calcular();"> Combo infantil $3.50 : (1 pieza de pollo, papas  fritas y una bebida pequeña).
+          </div>
+        </div>
+        <div class="cant">
+          <div>
+            <input class="cantidades" type="number" name="combo" id="cantidadC1" value="0">
+          </div>
+          <div>
+            <input class="cantidades" type="number" name="combo" id="cantidadC2" value="0">
+          </div> 
+          <div>
+            <input class="cantidades" type="number" name="combo" id="cantidadC3" value="0">
+          </div>
         </div>
       </div>
 
       <div class="adicionales">
         <h3>Adicionales:</h3>
         <div class="adicionalin">
-          <div><input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales1"> Ensalada $1.50.
-        </div>
-        <div>
-          <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales2"> Papa frita $1.25.
-        </div>
-        <div>
-            <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales3"> Pieza de pollo Gande $1.75.</div> 
+            <div>
+              <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales1"> Ensalada $1.50.
+            </div>
           <div>
-            <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales4"> Pieza de pollo mediana $1.50.</div>
-          <div>
-            <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales5"> Pieza de pollo pequeña $1.25.</div> 
-          <div>
-            <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales6"> Bebida grande $1.50.  </div> 
-          <div>
-            <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales7"> Bebida mediana $1.25.  </div> 
-          <div>
-            <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales8"> Bebida pequeña $1.00. </div> 
-          <div>
-            <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales9"> Café $0.50.</div>
-          <div>
-            <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales10"> Postre $1.25.</div>
-        </div>
+            <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales2"> Papa frita $1.25.
+            </div>
+            <div>
+              <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales3"> Pieza de pollo Gande $1.75.
+            </div> 
+            <div>
+              <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales4"> Pieza de pollo mediana $1.50.</div>
+            <div>
+              <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales5"> Pieza de pollo pequeña $1.25.</div> 
+            <div>
+              <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales6"> Bebida grande $1.50.  </div> 
+            <div>
+              <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales7"> Bebida mediana $1.25.  </div> 
+            <div>
+              <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales8"> Bebida pequeña $1.00. </div> 
+            <div>
+              <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales9"> Café $0.50.</div>
+            <div>
+              <input class="adicionalescheck" type="checkbox" name="adicionales" id="adicionales10"> Postre $1.25.</div>
+          </div>
         
       </div>
 
-      <div class="factura"> 
+      <div class="comentarios" onclick="habilitar();">
+        <h3 onclick="habilitar();">Agregar Comentarios o Sugerencias</h3>
+        <input type="text" disabled onclick="habilitar();" id="inpComentarios">
+      </div>
+
+      <div class="factura">
         <h3>Factura:</h3>
         <input type="text" name="" id="factura"> 
       </div>
-    </form>
+
+      <input type="submit" value="Enviar" onclick="calcular();">
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
